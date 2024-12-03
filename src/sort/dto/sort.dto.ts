@@ -1,8 +1,8 @@
-import { IsArray, IsInt, ArrayNotEmpty } from 'class-validator';
+import { IsArray, IsNumber, ArrayNotEmpty } from 'class-validator';
 
 export class SortDto {
   @IsArray()
   @ArrayNotEmpty()
-  @IsInt({ each: true })
+  @IsNumber({}, { each: true })
   numbers: number[];
 }
